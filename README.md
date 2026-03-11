@@ -1,5 +1,8 @@
 # NPMSemver
 
+[![Hex.pm](https://img.shields.io/hexpm/v/npm_semver.svg)](https://hex.pm/packages/npm_semver)
+[![CI](https://github.com/dannote/npm_semver/actions/workflows/ci.yml/badge.svg)](https://github.com/dannote/npm_semver/actions/workflows/ci.yml)
+
 npm-compatible semantic versioning for Elixir.
 
 Parse and match version ranges using npm's semver syntax: `^1.2.3`,
@@ -36,16 +39,19 @@ NPMSemver.max_satisfying(["1.0.0", "1.5.0", "2.0.0"], "^1.0.0")
 # => "1.5.0"
 ```
 
-### Convert to Elixir requirements
+### hex_solver integration
 
-For use with `hex_solver` or Elixir's `Version`:
+Convert npm ranges to constraints for [hex_solver](https://hex.pm/packages/hex_solver) (PubGrub dependency resolver):
+
+```elixir
+{:ok, constraint} = NPMSemver.to_hex_constraint("^1.2.3")
+```
+
+Or get the Elixir requirement string directly:
 
 ```elixir
 NPMSemver.to_elixir_requirement("^1.2.3")
 # => {:ok, ">= 1.2.3 and < 2.0.0-0"}
-
-NPMSemver.to_elixir_requirement("~1.2.3")
-# => {:ok, ">= 1.2.3 and < 1.3.0-0"}
 ```
 
 ## Supported syntax
