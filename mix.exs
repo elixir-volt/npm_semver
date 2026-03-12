@@ -2,7 +2,7 @@ defmodule NPMSemver.MixProject do
   use Mix.Project
 
   @version "0.1.0"
-  @source_url "https://github.com/dannote/npm_semver"
+  @source_url "https://github.com/elixir-volt/npm_semver"
 
   def project do
     [

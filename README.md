@@ -1,7 +1,7 @@
 # NPMSemver
 
 [![Hex.pm](https://img.shields.io/hexpm/v/npm_semver.svg)](https://hex.pm/packages/npm_semver)
-[![CI](https://github.com/dannote/npm_semver/actions/workflows/ci.yml/badge.svg)](https://github.com/dannote/npm_semver/actions/workflows/ci.yml)
+[![CI](https://github.com/elixir-volt/npm_semver/actions/workflows/ci.yml/badge.svg)](https://github.com/elixir-volt/npm_semver/actions/workflows/ci.yml)
 
 npm-compatible semantic versioning for Elixir.
 
